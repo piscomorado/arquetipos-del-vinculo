@@ -33,6 +33,7 @@
 
   --radius-lg: 16px;
   --radius-xl: 24px;
+  --radius-full: 9999px;
 
   --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
@@ -41,68 +42,23 @@
 }
 
 /* ============================================
-   GLOBAL ANIMATIONS
+   GLOBAL RESET & BASE
    ============================================ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes fadeScaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-5px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.4);
-  }
-
-  70% {
-    box-shadow: 0 0 0 15px rgba(192, 57, 43, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(192, 57, 43, 0);
-  }
-}
-
-/* ============================================
-   BASE STYLES
-   ============================================ */
 body {
   background-color: var(--color-secondary);
   color: var(--color-text);
   font-family: var(--font-primary);
   line-height: 1.7;
+  font-size: 16px;
+  min-height: 100vh;
 }
 
 h1,
@@ -112,6 +68,137 @@ h4 {
   font-family: var(--font-headings);
   color: var(--color-primary);
   letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   LAYOUT UTILITIES (FIXED)
+   ============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.container-narrow {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.mb-md {
+  margin-bottom: 1.5rem !important;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.app-header {
+  background: #fff;
+  padding: 1.5rem 0;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header__title {
+  text-align: center;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.app-header__subtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-family: var(--font-headings);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   STEPPER
+   ============================================ */
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.stepper__step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Connecting line */
+.stepper__step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #e0e0e0;
+  z-index: -1;
+}
+
+.stepper__step.active::after,
+.stepper__step.completed::after {
+  background: var(--color-accent);
+}
+
+.stepper__circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  color: var(--color-text-light);
+}
+
+.stepper__label {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stepper__step.active .stepper__circle {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 0 5px rgba(192, 57, 43, 0.2);
+}
+
+.stepper__step.active .stepper__label {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.stepper__step.completed .stepper__circle {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
 }
 
 /* ============================================
@@ -169,14 +256,47 @@ h4 {
 .question-card__text {
   font-size: 1.15rem;
   font-weight: 500;
+  margin-bottom: 1.5rem;
+  display: block;
 }
 
-/* Animated Likert Scale */
+.question-card__number {
+  color: var(--color-accent);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* Likert Scale Layout (Flex Fix) */
+.likert-scale {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.likert-scale__option {
+  flex: 1;
+  position: relative;
+}
+
+.likert-scale__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
 .likert-scale__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
   border: 2px solid #e1e1e1;
+  border-radius: 12px;
   background: #fff;
+  cursor: pointer;
   transition: all 0.3s var(--transition-smooth);
-  width: 100%;
+  height: 100%;
 }
 
 .likert-scale__label:hover {
@@ -192,24 +312,47 @@ h4 {
   box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.3);
 }
 
-/* Stepper Animation */
-.stepper__step.active .stepper__circle {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-  color: white;
-  animation: pulse-glow 2s infinite;
+.likert-scale__value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.likert-scale__description {
+  font-size: 0.75rem;
+  text-align: center;
+  opacity: 0.8;
 }
 
 /* Buttons */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .btn-primary {
   background: var(--color-primary);
+  color: white;
   border-radius: 50px;
-  /* Pill shape */
   padding: 1rem 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.9rem;
+  font-weight: 600;
   transition: all 0.4s var(--transition-smooth);
+  flex-grow: 0;
 }
 
 .btn-primary:hover:not(:disabled) {
@@ -218,9 +361,24 @@ h4 {
   box-shadow: 0 10px 25px -5px rgba(192, 57, 43, 0.4);
 }
 
-.btn-primary:disabled {
-  background: #ccc;
-  transform: none;
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.btn:disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 /* Results */
@@ -228,6 +386,11 @@ h4 {
   background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
   position: relative;
   overflow: hidden;
+  color: white;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .results__header::after {
@@ -240,19 +403,78 @@ h4 {
   background: radial-gradient(circle at top right, rgba(231, 76, 60, 0.2), transparent 60%);
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Loading Overlay */
 .loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.loading-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid var(--color-secondary-dark);
   border-top-color: var(--color-accent);
-  border-width: 3px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .container,
+  .container-narrow {
+    padding: 1rem;
+  }
+
   .question-section {
     padding: 1.5rem;
   }
@@ -260,5 +482,17 @@ h4 {
   .intro-highlight {
     font-size: 1.1rem;
     padding: 1.5rem;
+  }
+
+  .stepper__label {
+    display: none;
+  }
+
+  .likert-scale {
+    flex-wrap: wrap;
+  }
+
+  .likert-scale__option {
+    min-width: 45%;
   }
 }
