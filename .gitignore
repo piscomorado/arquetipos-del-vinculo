@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit!)
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# PDF files (generated)
+*.pdf
+!arquetipos_del_vinculo_tecnico.pdf
+!arquetipos_del_vinculo_tecnico_parte2.pdf
+!La Arquitectura del Vinculo ver1(1).pdf

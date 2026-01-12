@@ -1,0 +1,288 @@
+{
+    "sections": [
+        {
+            "id": "A",
+            "archetype": "Arquetipo A - El Salvador",
+            "category": "maternal",
+            "description": "Patrón vincular centrado en la necesidad de salvar, rescatar y nutrir a otros",
+            "questions": [
+                {
+                    "id": "A1",
+                    "text": "Siento que es mi responsabilidad resolver los problemas de las personas que amo."
+                },
+                {
+                    "id": "A2",
+                    "text": "Me cuesta mucho decir 'no' cuando alguien me pide ayuda, incluso si estoy agotado/a."
+                },
+                {
+                    "id": "A3",
+                    "text": "Siento culpa cuando alguien cercano está mal y no intervine para evitarlo."
+                },
+                {
+                    "id": "A4",
+                    "text": "Antepongo las necesidades de otros a las mías propias de forma recurrente."
+                },
+                {
+                    "id": "A5",
+                    "text": "Me siento valioso/a cuando los demás me necesitan o dependen de mí."
+                },
+                {
+                    "id": "A6",
+                    "text": "Me resulta difícil permitir que otros cometan errores sin intentar rescatarlos."
+                },
+                {
+                    "id": "A7",
+                    "text": "Tiendo a involucrarme en situaciones que no me corresponden para 'ayudar'."
+                },
+                {
+                    "id": "A8",
+                    "text": "Siento vacío o ansiedad cuando no tengo a alguien a quien cuidar."
+                }
+            ]
+        },
+        {
+            "id": "B",
+            "archetype": "Arquetipo B - El Controlador",
+            "category": "paternal",
+            "description": "Patrón vincular basado en la necesidad de controlar y establecer límites rígidos",
+            "questions": [
+                {
+                    "id": "B1",
+                    "text": "Necesito tener control sobre las situaciones para sentirme seguro/a."
+                },
+                {
+                    "id": "B2",
+                    "text": "Me molesta cuando las cosas no salen según mis planes o expectativas."
+                },
+                {
+                    "id": "B3",
+                    "text": "Tiendo a establecer reglas estrictas en mis relaciones cercanas."
+                },
+                {
+                    "id": "B4",
+                    "text": "Me cuesta confiar en que otros harán las cosas correctamente sin mi supervisión."
+                },
+                {
+                    "id": "B5",
+                    "text": "Prefiero tomar las decisiones importantes en mis relaciones."
+                },
+                {
+                    "id": "B6",
+                    "text": "Siento ansiedad cuando pierdo el control de una situación."
+                },
+                {
+                    "id": "B7",
+                    "text": "Me cuesta aceptar opiniones o formas diferentes de hacer las cosas."
+                },
+                {
+                    "id": "B8",
+                    "text": "Uso la razón y la lógica para mantener el orden en mis relaciones."
+                }
+            ]
+        },
+        {
+            "id": "C",
+            "archetype": "Arquetipo C - El Fusionado",
+            "category": "maternal",
+            "description": "Patrón vincular caracterizado por la pérdida de límites y fusión con el otro",
+            "questions": [
+                {
+                    "id": "C1",
+                    "text": "Me cuesta distinguir entre mis emociones y las de las personas cercanas."
+                },
+                {
+                    "id": "C2",
+                    "text": "Siento que pierdo mi identidad cuando estoy en una relación profunda."
+                },
+                {
+                    "id": "C3",
+                    "text": "Necesito estar constantemente cerca de mis seres queridos para sentirme bien."
+                },
+                {
+                    "id": "C4",
+                    "text": "Me resulta difícil tener intereses o actividades separados de mi pareja/familia."
+                },
+                {
+                    "id": "C5",
+                    "text": "Siento ansiedad extrema ante la posibilidad de separación o abandono."
+                },
+                {
+                    "id": "C6",
+                    "text": "Tiendo a absorber los estados emocionales de quienes me rodean."
+                },
+                {
+                    "id": "C7",
+                    "text": "Me cuesta establecer límites personales en mis relaciones íntimas."
+                },
+                {
+                    "id": "C8",
+                    "text": "Siento que 'completo' a la otra persona y que ella me completa a mí."
+                }
+            ]
+        },
+        {
+            "id": "D",
+            "archetype": "Arquetipo D - El Distante",
+            "category": "paternal",
+            "description": "Patrón vincular marcado por el distanciamiento emocional y la autonomía extrema",
+            "questions": [
+                {
+                    "id": "D1",
+                    "text": "Prefiero resolver mis problemas solo/a sin involucrar a otros."
+                },
+                {
+                    "id": "D2",
+                    "text": "Me cuesta expresar emociones profundas o vulnerabilidad."
+                },
+                {
+                    "id": "D3",
+                    "text": "Siento incomodidad cuando alguien intenta acercarse emocionalmente."
+                },
+                {
+                    "id": "D4",
+                    "text": "Mantengo cierta distancia incluso con las personas más cercanas."
+                },
+                {
+                    "id": "D5",
+                    "text": "Valoro mi independencia por encima de la intimidad emocional."
+                },
+                {
+                    "id": "D6",
+                    "text": "Me resulta difícil pedir ayuda, incluso cuando la necesito."
+                },
+                {
+                    "id": "D7",
+                    "text": "Prefiero actividades solitarias a compartir tiempo con otros."
+                },
+                {
+                    "id": "D8",
+                    "text": "Siento que las relaciones cercanas limitan mi libertad."
+                }
+            ]
+        },
+        {
+            "id": "E",
+            "archetype": "Arquetipo E - El Demandante",
+            "category": "maternal",
+            "description": "Patrón vincular centrado en la demanda constante de atención y nutrición",
+            "questions": [
+                {
+                    "id": "E1",
+                    "text": "Siento que nunca recibo suficiente atención o afecto de los demás."
+                },
+                {
+                    "id": "E2",
+                    "text": "Tiendo a sentirme abandonado/a cuando mis seres queridos no están disponibles."
+                },
+                {
+                    "id": "E3",
+                    "text": "Necesito constantemente validación y aprobación de los demás."
+                },
+                {
+                    "id": "E4",
+                    "text": "Me siento vacío/a o ansioso/a cuando estoy solo/a."
+                },
+                {
+                    "id": "E5",
+                    "text": "Tiendo a culpar a otros cuando no satisfacen mis necesidades emocionales."
+                },
+                {
+                    "id": "E6",
+                    "text": "Siento que merezco más cuidado del que recibo actualmente."
+                },
+                {
+                    "id": "E7",
+                    "text": "Me cuesta reconocer cuando mis demandas pueden agotar a otros."
+                },
+                {
+                    "id": "E8",
+                    "text": "Busco constantemente señales de que me quieren o me valoran."
+                }
+            ]
+        },
+        {
+            "id": "F",
+            "archetype": "Arquetipo F - El Crítico",
+            "category": "paternal",
+            "description": "Patrón vincular basado en el juicio, la crítica y los estándares elevados",
+            "questions": [
+                {
+                    "id": "F1",
+                    "text": "Tengo estándares muy altos para mí mismo/a y para los demás."
+                },
+                {
+                    "id": "F2",
+                    "text": "Tiendo a señalar errores o imperfecciones en las personas cercanas."
+                },
+                {
+                    "id": "F3",
+                    "text": "Me resulta difícil aceptar a las personas tal como son."
+                },
+                {
+                    "id": "F4",
+                    "text": "Siento decepción frecuente porque otros no cumplen mis expectativas."
+                },
+                {
+                    "id": "F5",
+                    "text": "Uso la crítica como forma de 'motivar' o 'mejorar' a los demás."
+                },
+                {
+                    "id": "F6",
+                    "text": "Me cuesta dar elogios o reconocimiento sin mencionar áreas de mejora."
+                },
+                {
+                    "id": "F7",
+                    "text": "Siento que mi rol es corregir o enseñar a quienes me rodean."
+                },
+                {
+                    "id": "F8",
+                    "text": "Me enfoco más en lo que está mal que en lo que está bien."
+                }
+            ]
+        }
+    ],
+    "likertScale": {
+        "1": {
+            "value": 1,
+            "label": "Nunca",
+            "description": "No me identifica"
+        },
+        "2": {
+            "value": 2,
+            "label": "Rara vez",
+            "description": "Pocas veces"
+        },
+        "3": {
+            "value": 3,
+            "label": "A veces",
+            "description": "Ocasionalmente"
+        },
+        "4": {
+            "value": 4,
+            "label": "Frecuentemente",
+            "description": "Muchas veces"
+        },
+        "5": {
+            "value": 5,
+            "label": "Siempre",
+            "description": "Me identifica totalmente"
+        }
+    },
+    "tieBreakerQuestions": {
+        "AB": "Cuando enfrento un conflicto importante, ¿qué es más natural para ti: intentar cuidar y nutrir al otro para resolver el problema, o establecer límites claros y mantener el control de la situación?",
+        "AC": "En una relación cercana, ¿te sientes más inclinado/a a mantener tu identidad ayudando al otro, o a fusionarte emocionalmente perdiendo tus propios límites?",
+        "AD": "Ante una crisis emocional de un ser querido, ¿prefieres involucrarte activamente para rescatarlo, o mantienes cierta distancia para preservar tu autonomía?",
+        "AE": "¿Te identificas más con dar cuidado a otros constantemente, o con demandar cuidado y atención para ti mismo/a?",
+        "AF": "En tus relaciones, ¿tiendes más a nutrir incondicionalmente, o a establecer expectativas y señalar áreas de mejora?",
+        "BC": "¿Prefieres mantener el control y los límites claros en tus relaciones, o te sientes más cómodo/a fusionándote con el otro?",
+        "BD": "Entre mantener el control sobre las situaciones y mantener distancia emocional, ¿cuál describe mejor tu forma de relacionarte?",
+        "BE": "¿Te sientes más identificado/a con controlar las situaciones, o con demandar atención y cuidado de otros?",
+        "BF": "Ambos implican estructura: ¿te defines más por controlar situaciones, o por juzgar y criticar según estándares elevados?",
+        "CD": "¿Experimentas más la fusión con el otro perdiendo límites, o el distanciamiento emocional extremo?",
+        "CE": "En el espectro de la dependencia, ¿te fusionas con el otro, o demandas constantemente su atención?",
+        "CF": "¿Tiendes a perder tus límites fusionándote con el otro, o mantienes estándares críticos hacia ti y los demás?",
+        "DE": "¿Prefieres la autonomía extrema y el distanciamiento, o experimentas un vacío que te lleva a demandar constantemente?",
+        "DF": "Ambos implican distancia: ¿te alejas emocionalmente, o mantienes distancia a través del juicio crítico?",
+        "EF": "¿Te identificas más con demandar nutrición constante de otros, o con establecer estándares críticos elevados?"
+    }
+}
