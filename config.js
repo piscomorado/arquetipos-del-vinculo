@@ -10,11 +10,11 @@ export const CONFIG = {
     // ============================================
     scoring: {
         minPerQuestion: 1,        // Minimum points per question
-        maxPerQuestion: 5,        // Maximum points per question (Likert scale)
+        maxPerQuestion: 4,        // Maximum points per question (Likert scale 1-4)
         questionsPerSection: 8,   // 8 questions per archetype
-        maxPerSection: 40,        // Maximum score per section (8 × 5)
+        maxPerSection: 32,        // Maximum score per section (8 × 4)
         totalSections: 6,         // 6 archetypes (A-F)
-        tieBreakerThreshold: 3    // Activate tie-breaker if difference ≤ 3 points
+        tieBreakerThreshold: 2    // Activate tie-breaker if difference ≤ 2 points (adjusted for smaller scale)
     },
 
     // ============================================
@@ -22,29 +22,29 @@ export const CONFIG = {
     // ============================================
     adequacyScale: {
         severeHypertrophy: {
-            min: 32,
-            max: 40,
+            min: 26,
+            max: 32,
             label: 'Hipertrofia Severa',
             description: 'Estructura rígida/defensiva',
             color: '#e74c3c'
         },
         moderateHypertrophy: {
-            min: 24,
-            max: 31,
+            min: 20,
+            max: 25,
             label: 'Hipertrofia Moderada',
             description: 'Patrón recurrente',
             color: '#f39c12'
         },
         flexiblePattern: {
-            min: 16,
-            max: 23,
+            min: 14,
+            max: 19,
             label: 'Patrón Flexible',
             description: 'Conciencia emergente',
             color: '#3498db'
         },
         fullIntegration: {
             min: 8,
-            max: 15,
+            max: 13,
             label: 'Integración Plena',
             description: 'El arquetipo como un don',
             color: '#27ae60'

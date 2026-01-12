@@ -127,10 +127,11 @@ function buildClinicalPrompt(scores) {
 ${scoresText}
 
 **ESCALA DE ADECUACIÓN:**
-- 32-40 pts: Hipertrofia Severa (Estructura rígida/defensiva)
-- 24-31 pts: Hipertrofia Moderada (Patrón recurrente)
-- 16-23 pts: Patrón Flexible (Conciencia emergente)
-- 8-15 pts: Integración Plena (El arquetipo como un don)
+**ESCALA DE ADECUACIÓN:**
+- 26-32 pts: Hipertrofia Severa (Estructura rígida/defensiva)
+- 20-25 pts: Hipertrofia Moderada (Patrón recurrente)
+- 14-19 pts: Patrón Flexible (Conciencia emergente)
+- 8-13 pts: Integración Plena (El arquetipo como un don)
 
 **ARQUETIPOS:**
 - Arquetipo A: El Salvador (Función Materna)

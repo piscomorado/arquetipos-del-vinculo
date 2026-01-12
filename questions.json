@@ -249,21 +249,16 @@
         },
         "2": {
             "value": 2,
-            "label": "Rara vez",
-            "description": "Pocas veces"
-        },
-        "3": {
-            "value": 3,
             "label": "A veces",
             "description": "Ocasionalmente"
         },
-        "4": {
-            "value": 4,
+        "3": {
+            "value": 3,
             "label": "Frecuentemente",
             "description": "Muchas veces"
         },
-        "5": {
-            "value": 5,
+        "4": {
+            "value": 4,
             "label": "Siempre",
             "description": "Me identifica totalmente"
         }
