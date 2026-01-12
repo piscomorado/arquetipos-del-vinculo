@@ -23,7 +23,8 @@ export class AIService {
 
         } catch (error) {
             console.error('Error in AI analysis:', error);
-            throw new Error('No se pudo completar el análisis. Por favor, intenta nuevamente.');
+            // Propagate the specific error message to the UI
+            throw new Error(error.message || 'No se pudo completar el análisis.');
         }
     }
 

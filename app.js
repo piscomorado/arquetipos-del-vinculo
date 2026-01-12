@@ -58,13 +58,19 @@ class App {
      * Render a question section
      */
     renderQuestion(sectionIndex) {
+        // Scroll to top when rendering new question
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
         const section = this.questionsData.sections[sectionIndex];
         const questionnaireElement = document.getElementById('questionnaire');
+
+        // Generic title to prevent confirmation bias
+        const genericTitle = `Sección ${String.fromCharCode(65 + sectionIndex)}`; // Sección A, B, C...
 
         questionnaireElement.innerHTML = `
       <div class="question-section">
         <div class="question-section__header">
-          <h2 class="question-section__title">${section.archetype}</h2>
+          <h2 class="question-section__title">${genericTitle}</h2>
           <p style="color: var(--color-gray-600);">${section.description}</p>
         </div>
         
